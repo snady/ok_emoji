@@ -1,11 +1,30 @@
 
+//populates the select dropdown!
+d3.select("#category").selectAll("option")
+  .data(Object.keys(data))
+    .enter().append("option")
+    .attr("value", function(d){return d;})
+    .text(function(d){return d;});
+//triggers change on change of dropdown!
+d3.select("#category")
+  .on('change', changechart);
+//changes chart!
+var changechart = function(){
+  var category = d3.select("#category").property('selectedIndex');
+  var catdata = data[category];
+  makechart(data);
+}
+
+
+
 //animated pie chart from d3 library
+
+
+
 
 var count = 0;
 var dt = data[count];
 console.log(dt);
-
-var categories = ["Republican", "Democrat", "Independent", "Don't Know", "Leaning Republican", "Leaning Democratic"];
 
 //storing percentage data
 var dl = [];

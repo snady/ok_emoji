@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var text = 
 "
 {'DETAILED GENERATION': 
