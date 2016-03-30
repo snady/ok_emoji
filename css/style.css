@@ -2,7 +2,7 @@ body{
   background-color: lightgray;
 }
 
-chart{
+#category{
   position:absolute;
-  right:0px;
+  top:100px;
 }
