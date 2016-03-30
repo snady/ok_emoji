@@ -49,9 +49,8 @@ function createChart(dt,c){
     keysx.splice(2,1);    
     var n = dp.splice(2, 1)[0];
 
-
-    var width = 800,
-    height = 750,
+var width = 700,
+    height = 700,
     radius = Math.min(width, height) / 2;
     
     var color = ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c"];
