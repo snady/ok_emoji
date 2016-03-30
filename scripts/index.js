@@ -6,14 +6,15 @@ d3.select("#category").selectAll("option")
     .attr("value", function(d){return d;})
     .text(function(d){return d;});
 //triggers change on change of dropdown!
-d3.select("#category")
-  .on('change', changechart);
+console.log(d3.select("#category"));
+d3.select("#category").on("change", changechart);
 //changes chart!
 var changechart = function(){
-  var category = d3.select("#category").property('selectedIndex');
-  var catdata = data[category];
-  makechart(data);
-}
+  console.log("hi");
+  // var category = d3.select("#category").property('selectedIndex');
+  // var catdata = data[category];
+  // makechart(catdata);
+};
 
 
 
@@ -24,7 +25,6 @@ var changechart = function(){
 
 var count = 0;
 var dt = data[count];
-console.log(dt);
 
 //storing percentage data
 var dl = [];
@@ -32,12 +32,10 @@ for(var key in dt){
   dl.push(dt[key]);
 }
 
-console.log(dl);
 
 //UGH LOL just gonna make a new array whatever
 
 var dp = dl.slice(1,7);
-console.log(dp);
 
 var width = 500,
     height = 500,
