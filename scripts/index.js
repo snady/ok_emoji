@@ -21,8 +21,8 @@ var changechart = function(d){
     createChart(data[subindex], 0); 
 };
 
-function createChart(dt){ 
-    var count=0;
+function createChart(dt,c){ 
+    var count=c;
     d3.select("svg").remove();
     //storing percentage data 
     var keys = Object.keys(dt);
@@ -78,7 +78,11 @@ function createChart(dt){
     var g = svg.selectAll(".arc")
         .data(pie(dp))
         .enter().append("g")
-        .attr("class", "arc");
+        .attr("class", "arc")
+        .on('click', function(d){ 
+	    if(c == dd.length - 1){ createChart(data[subindex], 0) } 
+	    else{ createChart(data[subindex], c + 1) }
+	});
 
     g.append("path")
         .attr("d", arc)
@@ -104,5 +108,21 @@ function createChart(dt){
         .style("font-size", "24px") 
         .style("text-decoration", "underline")  
         .text(keys[count]);
+
+    svg.append("text")
+        .attr("x", (width / 30))             
+        .attr("y", (height / 25))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "24px") 
+        .style("text-decoration", "underline")  
+        .text(keys[count]);
+
+    svg.append("text")
+        .attr("x", (width / 3))             
+        .attr("y", (height / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "24px") 
+        .text("N = " + n);
+
 
 }
