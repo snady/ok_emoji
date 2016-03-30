@@ -13,11 +13,9 @@ categoryList.selectAll('div').data(Object.keys(data))
   .append('label')
   .text(function(d){return d;});
 //changes chart!
-var changechart = function(d){
-  console.log(d);
+var changechart = function(category){
+  makechart(category);
 };
-
-
 
 //animated pie chart from d3 library
 
