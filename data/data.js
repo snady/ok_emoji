@@ -32,7 +32,8 @@ var data = {
 	 'HS or less men': {'ind': 44.0, 'rep': 22.0, 'dem': 27.0, 'dk': 6.0}
 	},
 'EMPLOYED?':
-	{'South Central (AL AR KY LA MS OK TN TX)': {'ind': 39.0, 'rep': 27.0, 'dem': 28.0, 'dk': 6.0},
+	{
+	'South Central (AL AR KY LA MS OK TN TX)': {'ind': 39.0, 'rep': 27.0, 'dem': 28.0, 'dk': 6.0},
 	'Northeast': {'ind': 38.0, 'rep': 20.0, 'dem': 36.0, 'dk': 6.0},
 	'Middle Atlantic (DE DC MD NJ NY PA)': {'ind': 34.0, 'rep': 20.0, 'dem': 39.0, 'dk': 6.0},
 	'West': {'ind': 42.0, 'rep': 22.0, 'dem': 30.0, 'dk': 7.0},
