@@ -105,7 +105,8 @@ var text =
 
 var data = JSON.parse(text); 
 
-/* some data explanations: 
+
+/* some data explanations:
 DK = don't know
-N = # people surveyed (i think) 
-*/ 
+N = # people surveyed (i think)
+*/
