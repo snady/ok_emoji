@@ -52,7 +52,7 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     var g = svg.selectAll(".arc")
-        .data(pie(dl))
+        .data(pie(dp))
         .enter().append("g")
         .attr("class", "arc");
 
