@@ -1,4 +1,4 @@
-var text = {
+var data = {
   'DETAILED GENERATION': {
     'Younger Millennial (18-25)': {
       'ind': 50.0,

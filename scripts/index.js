@@ -1,19 +1,20 @@
 
 //populates the select dropdown!
-d3.select("#category").selectAll("option")
-  .data(Object.keys(data))
-    .enter().append("option")
-    .attr("value", function(d){return d;})
-    .text(function(d){return d;});
-//triggers change on change of dropdown!
-console.log(d3.select("#category"));
-d3.select("#category").on("change", changechart);
+var categoryList = d3.select("#category");
+categoryList.selectAll('div').data(Object.keys(data))
+  .enter().append('div')
+  .append('input')
+  .attr({
+    type:"radio",
+    name:"category",
+    value:function(d){return d;},
+  }).on('change', function(d){changechart(d);})
+  .select(function(){return this.parentNode;})
+  .append('label')
+  .text(function(d){return d;});
 //changes chart!
-var changechart = function(){
-  console.log("hi");
-  // var category = d3.select("#category").property('selectedIndex');
-  // var catdata = data[category];
-  // makechart(catdata);
+var changechart = function(d){
+  console.log(d);
 };
 
 
