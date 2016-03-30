@@ -7,7 +7,13 @@ d3.select("#category").selectAll("option")
     .text(function(d){return d;});
 //triggers change on change of dropdown!
 d3.select("#category")
-  .on('change')
+  .on('change', changechart);
+//changes chart!
+var changechart = function(){
+  var category = d3.select("#category").property('selectedIndex');
+  var catdata = data[category];
+  makechart(data);
+}
 
 
 
